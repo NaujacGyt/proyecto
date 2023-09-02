@@ -8,8 +8,20 @@ accion = input("que desea hacer 1.-retirar 2.-consignar 3.-Consultar Saldo : ")
 
 accion1 = int(accion) 
 
+valor_retiro1 = 0
+valor_retiro = int(valor_retiro1)
+
 if (accion1 == 1):
-    print(input("ingrese la cantidad a retirar:"))
+    valor_retiro1 = print(input("ingrese la cantidad a retirar:"))
+print(valor_retiro)
+
+"""        if (valor_retiro => saldo_disponible):
+        print(input("saldo insuficiente para realizar el retiro,\n\
+            desea ver su saldo? Y or N :"))
+        else:
+        print("retiro exitoso")
+        
+        print(input("desea ver su saldo restante? Y or N:"))
 
 elif (accion1 == 2):
     print (input("ingrese la cantidad a consignar sin puntos ni espacios"))
@@ -27,5 +39,4 @@ elif (accion1 >= 4):
 #if (cantidad <= saldo_disponible):
    # print("retiro exitoso")
 #elif(cantidad > saldo_disponible):
-   # print("saldo insuficiente")
-
+   # print("saldo insuficiente")"""
