@@ -1,42 +1,56 @@
+
+
 saldo_disponible = 1000 ##Saldo Disponible en la Cuenta
+saldo_disponible=int(saldo_disponible)
+print("BIENVENIDO A SU CAJERO AUTOMATICO")
 
-accion = input("que desea hacer 1.-retirar 2.-consignar 3.-Consultar Saldo : ")
+accion = int(input("que desea hacer \n\
+               1.-RETIRAR \n\
+               2.-CONSIGNAR \n\
+               3.-CONSULTAR SALDO \n\
+               4.-SALIR \n\
+               DIGITE AQUI SU ELECCION: "))
 
 #valor_a_consignar = input("ingrese la cantidad a consignar sin puntos ni espacios")    
 
 #valor_a_retirar = input("ingrese la cantidad a retirar:")
-
-accion1 = int(accion) 
-
-valor_retiro1 = 0
-valor_retiro = int(valor_retiro1)
-
-if (accion1 == 1):
-    valor_retiro1 = print(input("ingrese la cantidad a retirar:"))
-print(valor_retiro)
-
-"""        if (valor_retiro => saldo_disponible):
-        print(input("saldo insuficiente para realizar el retiro,\n\
-            desea ver su saldo? Y or N :"))
+control = 0
+if (accion ==1):
+    retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
+    #print(retirar,"25")
+    if (retirar <= saldo_disponible):
+        print("RETIRO EXITOSO")
+    elif(retirar > saldo_disponible):
+        error=int((input("SALDO INSUFICIENTE\n\
+              DESEA VERIFICAR SU SALDO?\n\
+              1.-SI\n\
+              2.-NO\n\
+                     DIGITE AQUI SU ELECCION: ")))
+        if(error == 1):
+            print("SU SALDO DISPONIBLE ES", "$",saldo_disponible)
+            
         else:
-        print("retiro exitoso")
-        
-        print(input("desea ver su saldo restante? Y or N:"))
+            print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS =)")
+elif(accion == 2):
+    consignar = int(input("INGRESE EL MONTO A CONSIGNAR: "))
+    if(consignar > 0):
+        accionconsig = int(input("ACCION REALIZADA CON EXITO\n\
+                        DESEA VER SU NUEVO SALDO?\n\
+                        1.-SI \n\
+                        2.-NO\n\
+                        DIGITE AQUI SU ELECCION: "))
+        if (accionconsig == 1):
+            saldo_disponible = saldo_disponible + consignar
+            print("SU NUEVO SALDO ES", "$",saldo_disponible)
+        else:
+            print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
+elif(accion == 3):
+    print("SU SALDO DISPONIBLE ES: ", "$", saldo_disponible)
 
-elif (accion1 == 2):
-    print (input("ingrese la cantidad a consignar sin puntos ni espacios"))
-
-elif (accion1 == 3):
-    print ("$",saldo_disponible, "<----- este es su saldo disponible.")
-
-elif (accion1 >= 4):
-    print("Error digite uno de los numeros indicados en el menu principal.", accion)
-
-#valor_a_consignar = input("ingrese la cantidad a consignar sin puntos ni espacios")    
-
-#valor_a_retirar = input("ingrese la cantidad a retirar:")
-#cantidad = int(valor_a_retirar) 
-#if (cantidad <= saldo_disponible):
-   # print("retiro exitoso")
-#elif(cantidad > saldo_disponible):
-   # print("saldo insuficiente")"""
+elif(accion == 4):
+     print('=======================================')
+     print('GRACIAS POR USAR NUESTROS SERVICIOS!')
+     print('=======================================')
+     
+else: 
+    print("ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
