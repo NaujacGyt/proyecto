@@ -21,7 +21,20 @@ while True:
     retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
     #print(retirar,"25")
     if (retirar <= saldo_disponible):
-        print("RETIRO EXITOSO")
+       accionret = int(input("ACCION REALIZADA CON EXITO\n\
+                        DESEA VER SU NUEVO SALDO?\n\
+                        1.-SI \n\
+                        2.-NO\n\
+                        DIGITE AQUI SU ELECCION: "))
+       if (accionret == 1):
+                saldo_disponible = saldo_disponible - retirar
+                print("==============================================")
+                print("SU NUEVO SALDO ES", "$",saldo_disponible,)
+                print("==============================================")
+       else:
+            print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
+
+        #print("RETIRO EXITOSO")
     elif(retirar > saldo_disponible):
         error=int((input("SALDO INSUFICIENTE\n\
               DESEA VERIFICAR SU SALDO?\n\
@@ -29,8 +42,10 @@ while True:
               2.-NO\n\
                      DIGITE AQUI SU ELECCION: ")))
         if(error == 1):
+            print("==============================================")
             print("SU SALDO DISPONIBLE ES", "$",saldo_disponible)
-            
+            print("==============================================")
+
         else:
             print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS =)")
     else:
@@ -45,11 +60,15 @@ while True:
                         DIGITE AQUI SU ELECCION: "))
         if (accionconsig == 1):
             saldo_disponible = saldo_disponible + consignar
-            print("SU NUEVO SALDO ES", "$",saldo_disponible)
+            print("==============================================")
+            print("SU NUEVO SALDO ES", "$",saldo_disponible,)
+            print("==============================================")
         else:
             print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
  elif(accion == 3):
+    print("==============================================")
     print("SU SALDO DISPONIBLE ES: ", "$", saldo_disponible)
+    print("==============================================")
 
  elif(accion == 4):
      print('=======================================')
@@ -58,5 +77,7 @@ while True:
      print('=======================================')
      break
  else: 
-    print("ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
+    print("==========================================================================")
+    print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
+    print("==========================================================================")
 
