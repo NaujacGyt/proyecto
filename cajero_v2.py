@@ -27,7 +27,7 @@ BIENVENIDO A SU CAJERO AUTOMATICO\n\
 ===================================")
 sesion = 0
 contraseña = 0
-passing = 0
+passing = "NO"
 
 saldo_disponible = 0
 
@@ -38,7 +38,7 @@ while True:
        #sesion = input("INGRESE SU NUMERO DE CUENTA: ")
        #while True:
           
-         if( passing== 0):
+         if( passing == "NO"):
            sesion = input("INGRESE SU NUMERO DE CUENTA: ") 
            if (sesion == usuario [0] [0] ):
               while True: 
@@ -47,7 +47,7 @@ while True:
                       print("==============================================")
                       print("BIENVENIDO SR(A)", " ", usuario [0][2])
                       print("==============================================")
-                      passing = "ok"
+                      passing = "YES"
                       sesion = usuario [0] [0]
                       nombre = usuario [0] [2]
                       saldo_disponible = usuario [0] [3]
@@ -63,7 +63,7 @@ while True:
                       print("==============================================")
                       print("BIENVENIDO SR(A)", " ", usuario [1][2])
                       print("==============================================")
-                      passing = "ok"
+                      passing = "YES"
                       sesion = usuario [1] [0]
                       nombre = usuario [1] [2]
                       saldo_disponible = usuario [1] [3]
@@ -79,7 +79,7 @@ while True:
                       print("==============================================")
                       print("BIENVENIDO SR(A)", " ", usuario [2][2])
                       print("==============================================")
-                      passing = "ok"
+                      passing = "YES"
                       sesion = usuario [2] [0]
                       nombre = usuario [2] [2]
                       saldo_disponible = usuario [2] [3]
@@ -98,7 +98,7 @@ while True:
                
         #numero de sesion
         
-         elif(passing== "ok"):
+         elif(passing== "YES"):
              action = input("QUE ACCION DESEA REALIZAR? \n\
                 1.-RETIRAR \n\
                 2.-CONSIGNAR \n\
@@ -186,7 +186,7 @@ while True:
                  print("GRACIAS POR USAR NUESTROS SERVICIOS")
                  print("VUELVA PRONTO SR(A)", nombre )
                  print('=======================================')
-                 passing = 0
+                 passing = "NO"
              else:
                  print("==========================================================================")
                  print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
