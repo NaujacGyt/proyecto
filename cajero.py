@@ -18,28 +18,26 @@ BIENVENIDO A SU CAJERO AUTOMATICO\n\
 
 while True:
        sesion = 0
-       if (sesion == usuario[0][3]):
-          print(" ")
-          
+                 
        while True: 
         iniciosesu = input( "INGRESE SU NUMERO DE CUENTA: ")
         if (iniciosesu == usuario [0][0]):
            iniciosesc = input("INGRESE SU CONTRASEÑA:")
     
-        elif (iniciosesc == usuario [0] [1]):
+           if (iniciosesc == usuario [0] [1]):
              print("ACCESO EXITOSO")
              break
           
-        else:
-         print("contraseña incorrecta")
-         break
+           else:
+                print("contraseña incorrecta")
+                
        
  
 
 
-""" while True:
+       while True:
 
-      accion = input("QUE ACCION DESEA REALIZAR? \n\
+         accion = input("QUE ACCION DESEA REALIZAR? \n\
                 1.-RETIRAR \n\
                 2.-CONSIGNAR \n\
                 3.-CONSULTAR SALDO \n\
@@ -47,72 +45,68 @@ while True:
                 DIGITE AQUI SU ELECCION: ")
 
 
-      if (accion =="1"):
-        retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
-    
-        if (retirar <= saldo_disponible):
-           accionret = int(input("ACCION REALIZADA CON EXITO\n\
+         if (accion =="1"):
+              retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
+              if (retirar <= saldo_disponible):
+                   accionret = int(input("ACCION REALIZADA CON EXITO\n\
                             DESEA VER SU NUEVO SALDO?\n\
                             1.-SI \n\
                             2.-NO\n\
                             DIGITE AQUI SU ELECCION: "))
-           if (accionret == 1):
+                   if (accionret == 1):
                     saldo_disponible = saldo_disponible - retirar
                     print("==============================================")
                     print("SU NUEVO SALDO ES", "$",saldo_disponible,)
                     print("==============================================")
-           else:
-                print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
+                   else:
+                       print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
+              elif(retirar > saldo_disponible):
+                   error=int((input("SALDO INSUFICIENTE\n\
+                                    DESEA VERIFICAR SU SALDO?\n\
+                                    1.-SI\n\
+                                    2.-NO\n\
+                                    DIGITE AQUI SU ELECCION: ")))
+                   if(error == 1):
+                        print("==============================================")
+                        print("SU SALDO DISPONIBLE ES", "$",saldo_disponible)
+                        print("==============================================")
 
-        #print("RETIRO EXITOSO")
-        elif(retirar > saldo_disponible):
-            error=int((input("SALDO INSUFICIENTE\n\
-               DESEA VERIFICAR SU SALDO?\n\
-               1.-SI\n\
-               2.-NO\n\
-                      DIGITE AQUI SU ELECCION: ")))
-            if(error == 1):
-             print("==============================================")
-             print("SU SALDO DISPONIBLE ES", "$",saldo_disponible)
-             print("==============================================")
-
-            else:
-             print("==============================================")
-             print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS =)")
-             print("==============================================")
-        else:
-           print("==============================================")
-           print("ERROR ACCION NO VALIDA")
-           print("==============================================")
-      elif(accion == "2"):
-        consignar = int(input("INGRESE EL MONTO A CONSIGNAR: "))
-        if(consignar > 0):
-            accionconsig = int(input("ACCION REALIZADA CON EXITO\n\
+                   else:
+                    print("==============================================")
+                    print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS =)")
+                    print("==============================================")
+              else:
+                   print("==============================================")
+                   print("ERROR ACCION NO VALIDA")
+                   print("==============================================")
+         elif(accion == "2"):
+             consignar = int(input("INGRESE EL MONTO A CONSIGNAR: "))
+             if(consignar > 0):
+                  accionconsig = int(input("ACCION REALIZADA CON EXITO\n\
                          DESEA VER SU NUEVO SALDO?\n\
                          1.-SI \n\
                          2.-NO\n\
                          DIGITE AQUI SU ELECCION: "))
-            if (accionconsig == 1):
-                saldo_disponible = saldo_disponible + consignar
-                print("==============================================")
-                print("SU NUEVO SALDO ES", "$",saldo_disponible,)
-                print("==============================================")
-            else:
-                print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
-      elif(accion == "3"):
-        print("==============================================")
-        print("SU SALDO DISPONIBLE ES: ", "$", saldo_disponible)
-        print("==============================================")
+                  if (accionconsig == 1):
+                      saldo_disponible = saldo_disponible + consignar
+                      print("==============================================")
+                      print("==============================================")
+                  else:
+                      print("GRACIAS POR UTILIZAR NUESTROS SERVICIOS")
+         elif(accion == "3"):
+                    print("==============================================")
+                    print("SU SALDO DISPONIBLE ES: ", "$", saldo_disponible)
+                    print("==============================================")
 
-      elif(accion == "4"):
-         print('=======================================')
-         print('GRACIAS POR USAR NUESTROS SERVICIOS!\n\
-              VUELVA PRONTO')
-         print('=======================================')
-         break
-      else: 
-        print("==========================================================================")
-        print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
-        print("==========================================================================")
- else:
-   print("error cuenta no existe")"""
+         elif(accion == "4"):
+                    print('=======================================')
+                    print('GRACIAS POR USAR NUESTROS SERVICIOS!\n\
+                        VUELVA PRONTO')
+                    print('=======================================')
+                    break
+         else: 
+                    print("==========================================================================")
+                    print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
+                    print("==========================================================================")
+       else:
+            print("error cuenta no existe")
