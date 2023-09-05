@@ -94,7 +94,7 @@ while True:
                print("==============================================")
                print("ERROR CUENTA BANCARIA NO EXISTE",  )
                print("==============================================")
-               break
+               
                
         #numero de sesion
         
@@ -110,6 +110,7 @@ while True:
              if (action =="1"):
                  retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
                  if (retirar <= saldo_disponible):
+                     saldo_disponible = saldo_disponible - retirar
                      print("============================================")
                      print("         ACCION REALIZADA CON ÉXITO         ")
                      print("============================================")
@@ -119,7 +120,7 @@ while True:
                             DIGITE AQUI SU ELECCION: "))
                      
                      if (actionret == 1):
-                          saldo_disponible = saldo_disponible - retirar
+                          
                           print("==============================================")
                           print("SU NUEVO SALDO ES", "$",saldo_disponible,)
                           print("==============================================")
@@ -186,7 +187,10 @@ while True:
                  print("VUELVA PRONTO SR(A)", nombre )
                  print('=======================================')
                  passing = 0
-                 
+             else:
+                 print("==========================================================================")
+                 print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
+                 print("==========================================================================")  
          else: 
              print("==========================================================================")
              print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
