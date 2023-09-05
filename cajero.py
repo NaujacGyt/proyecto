@@ -3,22 +3,41 @@
 saldo_disponible = 1000 ##Saldo Disponible en la Cuenta
 saldo_disponible=int(saldo_disponible)
 
-usuario = [ ["45235", "1245", "Pepito Perez", 20000], ["78455", "3648", "Jaimito Cartero", 5000]            ]
+usuario = [[]]
+usuario[0].append("45235")
+usuario[0].append("1245")
+usuario[0].append("Pepito Perez")
+usuario[0].append(20000)
+#usuario = [ ["45235", "1245", "Pepito Perez", 20000], ["78455", "3648", "Jaimito Cartero", 5000]            ]
 
 
 accion = 0
 print("===================================\n\
 BIENVENIDO A SU CAJERO AUTOMATICO\n\
 ===================================")
+sesion = 0
 
 while True:
- iniciosesu = input( "INGRESE SU NUMERO DE CUENTA: ")
- if (iniciosesu == usuario [0] [0] ):
-    print("acceso correcto")
-    iniciosesc = input("INGRESE SU CONTRASEÑA")
-    while True:
+       sesion = ()
+       while True: 
+        iniciosesu = input( "INGRESE SU NUMERO DE CUENTA: ")
+        if (iniciosesu == usuario [0][0]):
+           iniciosesc = input("INGRESE SU CONTRASEÑA:")
+    
+        elif (iniciosesc == usuario [0] [1]):
+             print("ACCESO EXITOSO")
+             break
+          
+        else:
+         print("contraseña incorrecta")
+         break
+       
+ 
 
-      accion = input("que desea hacer \n\
+
+""" while True:
+
+      accion = input("QUE ACCION DESEA REALIZAR? \n\
                 1.-RETIRAR \n\
                 2.-CONSIGNAR \n\
                 3.-CONSULTAR SALDO \n\
@@ -94,4 +113,4 @@ while True:
         print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")
         print("==========================================================================")
  else:
-   print("error cuenta no existe")
+   print("error cuenta no existe")"""
