@@ -33,9 +33,10 @@ saldo_disponible = 0
 
 nombre = 0
 
+
 while True:
        #sesion = input("INGRESE SU NUMERO DE CUENTA: ")
-       while True:
+       #while True:
           
          if( passing== 0):
            sesion = input("INGRESE SU NUMERO DE CUENTA: ") 
@@ -64,6 +65,8 @@ while True:
                       print("==============================================")
                       passing = "ok"
                       sesion = usuario [1] [0]
+                      nombre = usuario [1] [2]
+                      saldo_disponible = usuario [1] [3]
                       break
                  else:
                      print("==============================================")
@@ -78,6 +81,8 @@ while True:
                       print("==============================================")
                       passing = "ok"
                       sesion = usuario [2] [0]
+                      nombre = usuario [2] [2]
+                      saldo_disponible = usuario [2] [3]
                       break
                  else:
                      print("==============================================")
@@ -105,8 +110,10 @@ while True:
              if (action =="1"):
                  retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
                  if (retirar <= saldo_disponible):
-                     actionret = int(input("ACCION REALIZADA CON EXITO\n\
-                             DESEA VER SU NUEVO SALDO?\n\
+                     print("============================================")
+                     print("         ACCION REALIZADA CON ÉXITO         ")
+                     print("============================================")
+                     actionret = int(input("DESEA VER SU NUEVO SALDO?\n\
                             1.-SI \n\
                             2.-NO\n\
                             DIGITE AQUI SU ELECCION: "))
@@ -176,9 +183,10 @@ while True:
              elif(action == "5"):
                  print('=======================================')
                  print("GRACIAS POR USAR NUESTROS SERVICIOS")
-                 print("VUELVA PRONTO")
+                 print("VUELVA PRONTO SR(A)", nombre )
                  print('=======================================')
-                 break
+                 passing = 0
+                 
          else: 
              print("==========================================================================")
              print("  ACCION INCORRECTA, POR FAVOR VERIFIQUE SU ELECCION Y VUELVA A INTENTAR")

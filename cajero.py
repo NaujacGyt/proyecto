@@ -15,10 +15,12 @@ accion = 0
 print("===================================\n\
 BIENVENIDO A SU CAJERO AUTOMATICO\n\
 ===================================")
-sesion = 0
 
 while True:
-       sesion = ()
+       sesion = 0
+       if (sesion == usuario[0][3]):
+          print(" ")
+          
        while True: 
         iniciosesu = input( "INGRESE SU NUMERO DE CUENTA: ")
         if (iniciosesu == usuario [0][0]):
@@ -47,7 +49,7 @@ while True:
 
       if (accion =="1"):
         retirar = int(input("INGRESE LA CANTIDAD A RETIRAR: "))
-    #print(retirar,"25")
+    
         if (retirar <= saldo_disponible):
            accionret = int(input("ACCION REALIZADA CON EXITO\n\
                             DESEA VER SU NUEVO SALDO?\n\
