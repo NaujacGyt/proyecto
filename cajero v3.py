@@ -39,20 +39,21 @@ saldo_disponible = 0
 nombre = 0
 sesion= 0
 contraseña = 0
- 
+posi = 0
 #contraseña = input("ingrese su contraseña:")
-
-while True:
+sesioninicial = True
+while sesioninicial:
          
        #sesion = input("INGRESE SU NUMERO DE CUENTA: ")
                  
          if( passing == "NO"):
            sesion = input("INGRESE SU NUMERO DE CUENTA: ")
-          
+           existecuenta = False
+
            for i in range(len(usuario)):
                                
                if usuario[i][0] == sesion:
-                                          
+                     existecuenta = True                     
                      while True:
                         contraseña = input("ingrese su contraseña:")
                         #for i in range(len(usuario)):
@@ -64,6 +65,7 @@ while True:
                                 sesion = usuario [i] [0]
                                 nombre = usuario [i] [2]
                                 saldo_disponible = usuario [i] [3]
+                                posi = i
                                 break
         
     
@@ -72,12 +74,13 @@ while True:
                              print("clave incorrecta vuelva a intentar")
                              print("==============================================")
 
-               elif (passing == "YES"):
-                  break
-               else:
-                  print("==============================================")
-                  print("ERROR CUENTA BANCARIA NO EXISTE",  )
-                  print("==============================================")
+               
+               
+                  
+           if( existecuenta == False):
+             print("==============================================")
+             print("ERROR CUENTA BANCARIA NO EXISTE",  )
+             print("==============================================")
                   
                  
          else:#(passing== "YES"):
@@ -134,8 +137,12 @@ while True:
                 
              elif(action == "2"):
                 
-                 consignar = int(input("INGRESE EL MONTO A CONSIGNAR: "))
-                 if(consignar > 0):
+                 consignar = input("INGRESE EL MONTO A CONSIGNAR: ")
+                 
+                 if (consignar == int):
+                     print("123")
+
+                 elif(consignar > 0):
                      saldo_disponible = saldo_disponible + consignar
                      print("==============================================")
                      print("        ACCION REALIZADA CON EXITO            ")
@@ -164,7 +171,9 @@ while True:
                  print("SU SALDO DISPONIBLE ES: ", "$", saldo_disponible)
                  print("==============================================")
              elif(action == "5"):
-                 usuario[i] [3] = saldo_disponible
+                 usuario[posi] [3] = saldo_disponible
+
+                 
                  print('=======================================')
                  print("GRACIAS POR USAR NUESTROS SERVICIOS")
                  print("VUELVA PRONTO SR(A)", nombre )
