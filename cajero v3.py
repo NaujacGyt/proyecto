@@ -89,7 +89,8 @@ while sesioninicial:
                 2.-CONSIGNAR \n\
                 3.-TRANSFERIR FONDOS\n\
                 4.-CONSULTAR SALDO \n\
-                5.-SALIR \n\
+                5.-CERRAR SESION \n\
+                6.-SALIR\n\
                 DIGITE AQUI SU ELECCION: ")
           
              if (action =="1"):
@@ -133,8 +134,7 @@ while sesioninicial:
                  else:
                      print("==============================================")
                      print("          ERROR ACCION NO VALIDA              ")
-                     print("==============================================")
-                
+                     print("==============================================")              
              elif(action == "2"):
                 
                  consignar = input("INGRESE EL MONTO A CONSIGNAR: ")
@@ -161,7 +161,6 @@ while sesioninicial:
                      print("==============================================")
                      print("          ERROR ACCION NO VALIDA              ")
                      print("==============================================")
-
              elif(action == "3"):
                 print("==============================================")
                 print("   ACCION NO DISPONIBLE POR EL MOMENTO        ")
