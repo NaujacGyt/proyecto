@@ -29,7 +29,7 @@ usuario[4].append("Cristobal Colon")
 usuario[4].append(20000)
 #usuario = [ ["45235", "1245", "Pepito Perez", 20000], ["78455", "3648", "Jaimito Cartero", 5000]            ]
 action = 0
-
+#saldo = usuario [2] [3]
 #sesion = 0
 #contraseña = 0
 passing = "NO"
@@ -152,12 +152,13 @@ BIENVENIDO A SU CAJERO AUTOMATICO\n\
                         print("==============================================")              
                 elif(action == "2"):
                     
-                    consignar = input("INGRESE EL MONTO A CONSIGNAR: ")
+                    consignar = int(input("INGRESE EL MONTO A CONSIGNAR: "))
                     
-                    if (consignar == int):
-                        print("123")
+                    
+                   # if (consignar == int):
+                        #print("123")
 
-                    elif(consignar > 0):
+                    if(consignar > 0):
                         saldo_disponible = saldo_disponible + consignar
                         print("==============================================")
                         print("        ACCION REALIZADA CON EXITO            ")
@@ -206,7 +207,7 @@ BIENVENIDO A SU CAJERO AUTOMATICO\n\
                                                         print("2,-NO")
                                                         confirmar = input("DIGITE AQUI SU RESPUESTA: ")
                                                         if(confirmar == "1"):
-                                                            print(usuario2)
+                                                           #print(usuario2)
                                                             usuario [i] [3] = usuario [i] [3] + montotransf
                                                             usuario [posi] [3] = usuario [posi] [3] - montotransf
                                                             saldo_disponible = saldo_disponible - montotransf
